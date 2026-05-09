@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Retail Sales Intelligence Dashboard</title>
+    <link rel="stylesheet" href="assets/dashboard.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Retail Sales Analytics</p>
+          <h1>Retail Sales Intelligence Dashboard</h1>
+          <p class="subtitle">
+            Executive view of revenue, customer demand, channel mix, regional performance, top
+            products, and discount efficiency from the retail sales dataset.
+          </p>
+        </div>
+        <div class="filters" aria-label="Dashboard filters">
+          <div class="control">
+            <label for="yearFilter">Period</label>
+            <select id="yearFilter" aria-label="Select reporting period"></select>
+          </div>
+          <div class="control">
+            <label for="metricFilter">Trend Metric</label>
+            <select id="metricFilter" aria-label="Select trend metric">
+              <option value="revenue">Revenue</option>
+              <option value="transactions">Transactions</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section id="kpis" class="kpi-grid" aria-label="Key performance indicators"></section>
+
+      <section class="main-grid">
+        <div>
+          <article class="panel">
+            <header class="panel-header">
+              <div>
+                <h2>Monthly Sales Trend</h2>
+                <p>Track revenue or transaction momentum across the reporting window.</p>
+              </div>
+              <p id="period"></p>
+            </header>
+            <div class="chart-wrap">
+              <canvas id="trendChart" aria-label="Monthly trend chart"></canvas>
+            </div>
+          </article>
+
+          <div class="two-up">
+            <article class="panel">
+              <header class="panel-header">
+                <div>
+                  <h2>Category Performance</h2>
+                  <p>Revenue ranking by merchandise category.</p>
+                </div>
+              </header>
+              <div class="chart-wrap small">
+                <canvas id="categoryChart" aria-label="Category revenue chart"></canvas>
+              </div>
+            </article>
+
+            <article class="panel">
+              <header class="panel-header">
+                <div>
+                  <h2>Channel Mix</h2>
+                  <p>Contribution of In-Store, Mobile App, and Online sales.</p>
+                </div>
+              </header>
+              <div class="chart-wrap small">
+                <canvas id="channelChart" aria-label="Channel mix chart"></canvas>
+              </div>
+            </article>
+          </div>
+
+          <div class="two-up">
+            <article class="panel">
+              <header class="panel-header">
+                <div>
+                  <h2>Regional Contribution</h2>
+                  <p>Revenue share by operating region.</p>
+                </div>
+              </header>
+              <div class="chart-wrap small">
+                <canvas id="regionChart" aria-label="Region revenue chart"></canvas>
+              </div>
+            </article>
+
+            <article class="panel">
+              <header class="panel-header">
+                <div>
+                  <h2>Discount Efficiency</h2>
+                  <p>Revenue and transaction mix by discount tier.</p>
+                </div>
+              </header>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Discount</th>
+                      <th>Revenue</th>
+                      <th>Transactions</th>
+                      <th>Share</th>
+                    </tr>
+                  </thead>
+                  <tbody id="discountBody"></tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="stack">
+          <article class="panel">
+            <header class="panel-header">
+              <div>
+                <h2>Top Products</h2>
+                <p>Highest revenue products in the selected period.</p>
+              </div>
+            </header>
+            <div id="productList" class="rank-list"></div>
+          </article>
+
+          <article class="panel">
+            <header class="panel-header">
+              <div>
+                <h2>Executive Insights</h2>
+                <p>Fast readout for business review.</p>
+              </div>
+            </header>
+            <div id="insights" class="insights"></div>
+          </article>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>Source: retail_sales_dataset.csv</span>
+        <span class="creator">Created by Hieu Nguyen</span>
+      </footer>
+    </main>
+
+    <script src="data/retail_sales_summary.js"></script>
+    <script src="assets/dashboard.js"></script>
+  </body>
+</html>
