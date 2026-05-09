@@ -1,4 +1,5 @@
 # Retail Sales Intelligence Dashboard
+https://hnguyen76.github.io/Retail_Sales/
 
 Professional retail sales analysis package built from `retail_sales_dataset.csv`.
 
