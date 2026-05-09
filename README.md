@@ -11,6 +11,9 @@ Professional retail sales analysis package built from `retail_sales_dataset.csv`
 - `data/retail_sales_summary.json` - machine-readable summary data.
 - `data/retail_sales_summary.js` - browser-ready data used by the dashboard.
 - `scripts/build_retail_report.py` - reproducible analysis script using only the Python standard library.
+- `PROJECT_PLAN.md` - sample GitHub Project roadmap and issue plan.
+- `.github/ISSUE_TEMPLATE/project_task.md` - reusable issue template for Project tasks.
+- `docs/github-project-guide.md` - step-by-step guide for creating the GitHub Project board.
 
 ## Open The Dashboard
 
