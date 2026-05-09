@@ -1,2 +1,7 @@
 __pycache__/
 *.py[cod]
+
+# Local-only GitHub Project learning notes
+PROJECT_PLAN.md
+docs/github-project-guide.md
+.github/ISSUE_TEMPLATE/project_task.md
